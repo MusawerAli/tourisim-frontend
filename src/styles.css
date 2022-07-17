@@ -1,0 +1,605 @@
+.buttonStyle {
+  background-color: #556ed8 !important;
+  width: 150px !important;
+}
+button.buttonStyle:hover {
+  background-color: #556ed8 !important;
+}
+button.buttonStyle.btn.btn-secondary:focus {
+  background-color: #556ed8 !important;
+}
+.sidebar:after {
+  background: #556ed8 !important;
+}
+.textColor {
+  color: #556ed8 !important;
+}
+.profileButton {
+  width: 250px;
+  background-color: #556ed8 !important;
+  margin-left: -1px !important;
+}
+button.profileButton:hover {
+  background: #556ed8 !important;
+}
+.branchButton {
+  width: 250px;
+  background-color: transparent !important;
+  border: 2px solid #556ed8 !important;
+  color: #556ed8 !important;
+  margin-left: -1px !important;
+}
+button.branchButton:hover {
+  background-color: transparent !important;
+  color: #556ed8 !important;
+}
+button.branchButton.btn.btn-secondary:focus {
+  background: transparent !important;
+  color: #556ed8 !important;
+}
+button.profileButton.btn.btn-secondary:focus {
+  background: #556ed8 !important;
+}
+
+.mainButtons {
+  display: flex;
+  justify-content: center;
+}
+.nav-tabs .nav-link.active {
+  background-color: #556ed8 !important;
+  color: white !important;
+  font-weight: bold !important;
+  text-align: center;
+}
+.nav-tabs .nav-link {
+  width: 210px !important;
+  border: 1px solid #556ed8 !important;
+  font-weight: bold !important;
+  color: #556ed8 !important;
+  text-align: center;
+}
+.filterLogoStyle {
+  display: flex;
+  justify-content: flex-end;
+}
+.filterLogoStyle {
+  padding-top: 11px;
+  margin-right: 27px;
+}
+.headerColorInner {
+  background-color: #8cde8f !important;
+  color: white !important;
+  font-weight: bold;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+.headerColorInnerUpcoming {
+  background-color: #556ed8 !important;
+  color: white !important;
+  font-weight: bold;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+.cardBoadyStyle {
+  padding: 30px !important;
+  border: 1px solid #8cde8f !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  padding-bottom: 0px !important;
+  line-height: 10px;
+}
+
+.cardBoadyStyleUpcoming {
+  padding: 30px !important;
+  border: 1px solid #556ed8 !important;
+
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  padding-bottom: 0px !important;
+  line-height: 10px;
+}
+.cardBoadyStyleUnActive {
+  padding: 30px !important;
+  border: 1px solid gray !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  padding-bottom: 0px !important;
+  line-height: 10px;
+}
+.alignContent {
+  display: flex;
+  font-size: 14px;
+}
+.headerContentStyle {
+  justify-content: space-around;
+}
+.cardButtonStyle {
+  background-color: #8cde8f !important;
+}
+button.cardButtonStyle:hover {
+  background-color: #8cde8f !important;
+}
+button.cardBoadyStyle:focus {
+  background-color: #8cde8f !important;
+}
+.cardBorderStyle {
+  border: 2px solid #8cde8f !important ;
+}
+.innerBoxStyle {
+  color: white;
+  text-align: center;
+}
+.headerColor {
+  background-color: #556ed8 !important;
+}
+.innerBoxText {
+  color: #556ed8 !important;
+  font-weight: 500;
+  text-align: center;
+}
+.textFormat {
+  text-align: center;
+  font-size: 18px;
+}
+.imageStyle {
+  margin-left: 5px !important;
+}
+.addAnotherShift {
+  font-size: 14px;
+  color: #556ed8;
+}
+.branchButton1 {
+  background-color: transparent;
+  border: transparent;
+  color: #556ed8;
+  margin-top: 10px;
+  border: none !important;
+}
+.custom-space {
+  margin-top: 0px !important;
+  min-height: 100vh !important;
+}
+.profileTextStyle {
+  margin-bottom: 0px !important;
+}
+.removeExtraSpace {
+  margin-bottom: 0px !important;
+}
+.DashBoardHeading {
+  text-align: center;
+  color: #556ed8 !important;
+  font-weight: bold !important;
+}
+.headerColorInnerunactive {
+  background-color: gray !important;
+  color: white !important;
+  font-weight: bold;
+  border-top-right-radius: 14px !important;
+  border-top-left-radius: 14px !important;
+}
+.searchFieldStyle {
+  margin-top: 17px;
+}
+.outerCard {
+  justify-content: center;
+  background-color: #556ed8 !important;
+  border-radius: 20px !important;
+}
+.cardInnerstyle {
+  line-height: 10px;
+  text-align: center;
+}
+.removeSpace {
+  margin-top: 0px;
+}
+.subscriptionCardButton {
+  background-color: #556ed8 !important;
+  border-radius: 20px !important;
+}
+button.subscriptionCardButton:hover {
+  background-color: #556ed8 !important;
+}
+button.subscriptionCardButton.btn.btn-secondary:focus {
+  background-color: #556ed8 !important;
+  border-radius: 20px !important;
+}
+.bottomButtonStyle {
+  display: flex;
+}
+.subscriptionTopButton {
+  background-color: transparent !important;
+  border-radius: 20px !important;
+  width: 150px !important;
+  height: 50px !important;
+  color: black !important;
+  border: 2px solid gray !important;
+  padding: 0px 2px 0px 2px !important;
+}
+.timeSlotButton {
+  background-color: transparent !important;
+  border-radius: 20px !important;
+  color: black !important;
+  border: 2px solid gray !important;
+  margin-left: 0px !important;
+  margin-right: 5px !important;
+}
+.modal-content {
+  line-height: 10px !important;
+}
+.userModalHeading {
+  display: flex;
+  justify-content: space-between;
+}
+.clickStyle {
+  background-color: #556ed8 !important;
+  border: 2px solid #556ed8 !important;
+  color: white !important;
+  border-radius: 20px !important;
+  margin-left: 0px !important;
+  margin-right: 5px !important;
+}
+button.timeSlotButton.btn.btn-secondary:focus {
+  background: transparent !important;
+  color: #556ed8 !important;
+}
+button.clickStyle.btn.btn-secondary:focus {
+  background: #556ed8 !important;
+  color: white !important;
+}
+
+button.timeSlotButton.btn.btn-secondary:hover {
+  background: transparent !important;
+  color: #556ed8 !important;
+}
+button.clickStyle.btn.btn-secondary:hover {
+  background: #556ed8 !important;
+  color: white !important;
+}
+.tableStyle {
+  border: 2px solid #8cde8f;
+}
+.centerAlignText {
+  justify-content: center;
+}
+.activeInnerRow {
+  justify-content: space-around !important;
+}
+.subscriptionCardBoadyStyle {
+  padding: 10px !important;
+  border: 1px solid #8cde8f !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  padding-bottom: 0px !important;
+  line-height: 10px;
+}
+.subscriptionCardBoadyExpire {
+  padding: 10px !important;
+  border: 1px solid gray !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  padding-bottom: 0px !important;
+  line-height: 10px;
+}
+.headerColorInnerExpired {
+  background-color: gray !important;
+  color: white !important;
+  font-weight: bold;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+.showPointer {
+  cursor: pointer;
+}
+.datePickerStyle {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.formStyle .react-datepicker-wrapper {
+  display: flex;
+  width: 100%;
+}
+.formStyle .react-datepicker-wrapper .react-datepicker__input-container {
+  display: flex;
+  width: 100%;
+}
+.dateWidth .datePickerStyle {
+  max-width: 402px !important;
+  border: 1px solid #e3e3e3;
+}
+.changeStyle {
+  background-color: #556ed8 !important;
+  border-radius: 20px !important;
+  width: 150px !important;
+  height: 50px !important;
+  color: black !important;
+  border: 2px solid gray !important;
+  padding: 0px 2px 0px 2px !important;
+  color: white !important;
+}
+button.changeStyle.btn.btn-secondary:hover {
+  background-color: #556ed8 !important;
+  border-radius: 20px !important;
+  width: 150px !important;
+  height: 50px !important;
+  color: black !important;
+  border: 2px solid gray !important;
+  color: white !important;
+}
+button.changeStyle.btn.btn-secondary:focus {
+  background-color: #556ed8 !important;
+  border-radius: 20px !important;
+  width: 150px !important;
+  height: 50px !important;
+  color: black !important;
+  border: 2px solid gray !important;
+  color: white !important;
+}
+.selectedCartStyle {
+  line-height: 10px;
+  text-align: center;
+  background-color: #8cde8f !important;
+  border-radius: 10px !important;
+}
+.profileImageStyle {
+  margin-left: 26px;
+  margin-top: 11px;
+  position: relative;
+}
+.profileImageInner {
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.locationLogoStyle {
+  position: relative;
+}
+.locationIconStyle {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+}
+.main-container > div > div > div > .css-yk16xz-control {
+  border-radius: 0px;
+  outline: none;
+}
+.googleMapStyle {
+  height: 45vh;
+  border: 2px solid #8cde8f;
+}
+.adminLowerButton {
+  display: flex;
+  justify-content: space-evenly;
+}
+.registrationTopBorder {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin-top: 10px;
+}
+.topIconStyle {
+  display: flex;
+  justify-content: space-between;
+}
+.acceptRejectIconStyle {
+  justify-content: space-around;
+  display: flex;
+}
+.adminVisitButton {
+  width: 100%;
+  background-color: #556ed8 !important;
+}
+button.adminVisitButton:hover {
+  width: 100%;
+  background-color: #556ed8 !important;
+}
+button.adminVisitButton.btn.btn-secondary:focus {
+  background-color: #556ed8 !important;
+}
+.adminReportButton {
+  width: 100%;
+  background-color: transparent !important;
+  border: 1px solid gray !important;
+  color: gray !important;
+}
+button.adminReportButton:hover {
+  width: 100%;
+  background-color: transparent !important;
+  border: 1px solid gray !important;
+  color: gray !important;
+}
+button.adminReportButton.btn.btn-secondary:focus {
+  background-color: transparent !important;
+  color: gray !important;
+}
+.removePadding {
+  padding: 0px !important ;
+}
+.editVisitButton {
+  background: transparent !important;
+  border: 1px solid gray !important;
+  color: #556ed8 !important;
+  padding: 4px !important;
+  width: 116px !important;
+}
+button.editVisitButton:hover {
+  background: transparent !important;
+  border: 1px solid gray !important;
+  color: #556ed8 !important;
+}
+button.editVisitButton.btn.btn-secondary:focus {
+  background: transparent !important;
+  border: 1px solid gray !important;
+  color: #556ed8 !important;
+}
+.react-select .react-select__control {
+  background-color: white !important;
+}
+.innerCardsBorder {
+  border: 1px solid gray !important;
+  border-radius: 0px !important;
+}
+.cornerButton {
+  justify-content: flex-end;
+}
+/* .card .card-body{
+  padding: 0px 14px 10px 15px !important;
+} */
+.upperCardButton {
+  background-color: #556ed8 !important;
+  color: white !important;
+}
+.textAreaStyle {
+  border-radius: 14px !important;
+}
+.SubscriptionRoundButton {
+  background-color: transparent !important;
+  color: gray !important;
+  border: 1px solid gray !important;
+}
+.btn.selected {
+  background-color: #556ed8 !important;
+  border: 1px solid #556ed8 !important;
+  color: white !important;
+}
+.btn.SubscriptionRoundButton:hover {
+  background-color: #556ed8 !important;
+  border: 1px solid #556ed8 !important;
+  color: white !important;
+}
+.btn.SubscriptionRoundButton:focus {
+  background-color: transparent !important;
+  color: gray !important;
+  border: 1px solid gray !important;
+}
+.btn.SubscriptionRoundButton:active {
+  background-color: transparent !important;
+  color: gray !important;
+  border: 1px solid gray !important;
+}
+.btn.selected:hover {
+  background-color: #556ed8 !important;
+  border: 1px solid #556ed8 !important;
+  color: white !important;
+}
+.btn.selected:focus {
+  background-color: #556ed8 !important;
+  border: 1px solid #556ed8 !important;
+  color: white !important;
+}
+.btn.selected:active {
+  background-color: #556ed8 !important;
+  border: 1px solid #556ed8 !important;
+  color: white !important;
+}
+.incrementor {
+  display: flex;
+}
+.incrementFileld {
+  width: 40px !important;
+  height: 24px !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+.incrementButton {
+  background-color: #556ed8 !important;
+  color: white !important;
+  font-weight: bold !important;
+  border: 1px solid #556ed8 !important;
+  width: 24px;
+  height: 24px;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.decrementButton {
+  background-color: #556ed8 !important;
+  color: white !important;
+  font-weight: bold !important;
+  border: 1px solid #556ed8 !important;
+  width: 24px;
+  height: 24px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.incrementFields {
+  display: flex;
+  justify-content: space-between;
+}
+.spaceEvenly {
+  justify-content: space-evenly;
+}
+.topSpacing {
+  padding-top: 0vh !important;
+}
+.section-image:after {
+  background-color: #556ed8 !important;
+}
+.full-page {
+  padding: 30px 0 120px !important;
+}
+.react-time-picker__wrapper {
+  border: 1px solid #dddddd;
+}
+.minHeight {
+  min-height: 100vh !important;
+}
+.workingHoursBorder {
+  border: 1px solid gray;
+  height: 20px;
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.navbar-absolute fixed-top navbar-transparent navbar navbar-expand-lg {
+  border-bottom: none !important;
+}
+.highlighted {
+  background-color: #556ed8 !important;
+  color: white !important;
+}
+button.highlighted:focus {
+  background-color: #556ed8 !important;
+  color: white !important;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.noDisplay {
+  display: none !important;
+}
+.centerContent {
+  justify-content: center !important;
+}
+.closepointer {
+  cursor: pointer;
+}
+
+.table-responsive {
+  overflow: auto !important;
+}
+.sidebar .sidebar-wrapper {
+  overflow: hidden !important;
+}
+
+.datePickerStyle {
+  width: 100% !important;
+  padding-top: 8px !important;
+  margin-bottom: 6px !important;
+  padding-bottom: 8px !important;
+}
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  margin-top: 5px !important;
+}
+.visit-capisty {
+  margin-right: 42px;
+}
