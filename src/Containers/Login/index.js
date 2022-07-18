@@ -114,7 +114,7 @@ function Login(props) {
 }
 
 const mapStateToProps = (state) => {
-  debugger;
+  
   return ({
     errors: state.login.errors,
   })

@@ -9,7 +9,7 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case types.LOGIN:
-      debugger
+      
       return {
         ...state,
         requesting: true,
@@ -30,7 +30,7 @@ export default (state = initialState, action) => {
       };
 
     case types.LOGIN_FAILED:
-      debugger;
+      
       return {
         ...state,
         requesting: false,

@@ -1,10 +1,10 @@
 import { all, call, put, takeLatest } from "redux-saga/effects";
 
 // constants
-import { appConfig } from "../../../Config/app";
+import { appConfig } from "Config/app";
 
 // utils
-import XHR from "../../../Utils/xhr";
+import XHR from "Utils/xhr";
 
 // redux
 import types from "./types";
@@ -25,24 +25,25 @@ function loginAPI(data) {
 }
 
 function* login({ data }) {
-  debugger
+  
   try {
     const response = yield call(loginAPI, data);
-    debugger
+    
     yield put(loginSuccess(response.data.data));
-    yield put(setAccessToken(response.data.data.access_token));
-    localStorage.setItem("token", response.data.data.access_token);
-    localStorage.setItem("user_Id", response.data.data.user.id);
-    localStorage.setItem("user_uuid", response.data.data.user.user_uuid);
-  } catch (e) {
     debugger;
-    if (e.response !== undefined) {
-      const { response } = e;
-      if (response && response.data.message !== undefined) {
-        const { failed } = response.data.message;
-        yield put(loginFailed(failed));
-      }
-    }
+    yield put(setAccessToken(response.data.data.access_token));
+    // localStorage.setItem("token", response.data.data.access_token);
+    // localStorage.setItem("user_Id", response.data.data.user.id);
+    // localStorage.setItem("user_uuid", response.data.data.user.user_uuid);
+  } catch (e) {
+    
+    // if (e.response !== undefined) {
+    //   const { response } = e;
+    //   if (response && response.data.message !== undefined) {
+    //     const { failed } = response.data.message;
+    //     yield put(loginFailed(failed));
+    //   }
+    // }
 
     // response && showNotification(response.data.message, 'error')
   }

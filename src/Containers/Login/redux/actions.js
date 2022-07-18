@@ -1,7 +1,7 @@
 import types from "./types";
 
 export const login = (data) => {
-  debugger
+  
   return ({
     type: types.LOGIN,
     data,
@@ -14,7 +14,7 @@ export const loginSuccess = (data) => ({
 });
 
 export const loginFailed = (data) => {
-  debugger
+  
   return ({
     type: types.LOGIN_FAILED,
     data,

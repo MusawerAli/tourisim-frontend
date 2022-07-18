@@ -3,17 +3,15 @@ import { lazy } from "react";
 
 const Login = lazy(() => import("Containers/Login"));
 const Transfers = lazy(() => import("Containers/Admin/Transfers"));
+const Configrations = lazy(() => import("Containers/Admin/Configrations"));
 
 const routes = [
-  [
-
-  ],
   [
     {
       path: "/index",
       name: "Transfers",
       icon: "nc-icon nc-bank",
-      component: Transfers,
+      component: Configrations,
       layout: "/admin",
     },
     {
@@ -24,6 +22,9 @@ const routes = [
       layout: "/auth",
       isShow: 1,
     },
+  ],
+  [
+
   ],
 ];
 

@@ -5,9 +5,11 @@ import { connect } from "react-redux";
 const RouteGuard = ({
   isProtected = false,
   accessToken,
+  user,
   component: Component,
   ...rest
 }) => {
+  console.log('accessToken',user)
   return (
     <Route
       {...rest}

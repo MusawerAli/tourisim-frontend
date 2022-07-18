@@ -9,7 +9,7 @@ import { routerMiddleware } from "connected-react-router";
 const sagaMiddleware = createSagaMiddleware();
 export const history = createBrowserHistory();
 /**
- * this app uses React Native Debugger, but it works without it
+ * this app uses React Native , but it works without it
  */
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const middlewares = [
