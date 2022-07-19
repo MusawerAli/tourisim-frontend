@@ -35,7 +35,7 @@ class Pages extends React.Component {
     }
   }
   getRoutes = (routes) => {
-    return routes[1].map((prop, key) => {
+    return routes[0].map((prop, key) => {
       if (prop.collapse) {
         return this.getRoutes(prop.views);
       }

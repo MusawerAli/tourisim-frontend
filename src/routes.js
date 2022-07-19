@@ -9,11 +9,19 @@ const routes = [
   [
     {
       path: "/index",
-      name: "Transfers",
+      name: "Configuration",
       icon: "nc-icon nc-bank",
       component: Configrations,
       layout: "/admin",
     },
+    {
+      path: "/transfer",
+      name: "Transfers",
+      icon: "nc-icon nc-bank",
+      component: Transfers,
+      layout: "/admin",
+    },
+
     {
       path: "/login",
       name: "Login",
@@ -22,10 +30,7 @@ const routes = [
       layout: "/auth",
       isShow: 1,
     },
-  ],
-  [
-
-  ],
+  ]
 ];
 
 export default routes;

@@ -134,6 +134,7 @@ class Sidebar extends React.Component {
   }
   render() {
     return (
+      
       <div
         className="sidebar"
         data-color={this.props.bgColor}
@@ -145,7 +146,7 @@ class Sidebar extends React.Component {
             className="simple-text logo-mini"
           >
             <div className="d-flex justify-content-center">
-              <img src='' alt="react-logo" />
+              <img src={logo} alt="react-logo" />
             </div>
           </a>
           <a href="#" className="simple-text logo-normal">

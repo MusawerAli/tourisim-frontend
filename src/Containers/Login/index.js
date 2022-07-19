@@ -41,7 +41,7 @@ function Login(props) {
     <div className="login-page">
       <Container>
         <div className="justify-content-center d-flex pb-5 mt-0">
-          <img src={'TransfersLogo'} alt="transfer" />
+          <img width="100" src={TransfersLogo} alt="transfer" />
         </div>
         <Row>
           <Col className="ml-auto mr-auto" lg="4" md="6">

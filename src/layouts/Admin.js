@@ -91,9 +91,8 @@ class Admin extends React.Component {
     document.body.classList.toggle("sidebar-mini");
   };
   render() {
-      debugger
-    const routesData =
-      this.props.user.user.role.name === "admin" ? routes[0] : routes[1];
+    
+    const routesData =routes[0]
       debugger;
     return (
       <div className="wrapper">

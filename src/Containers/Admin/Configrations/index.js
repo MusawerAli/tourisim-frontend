@@ -35,19 +35,14 @@ import SweetAlert from "components/Alerts";
 
 function Configrations(props) {
   const {
-    // allPlans,
-    // visitsPerMonth,
-    // getVisitsPerMonth,
-    // getTimeSlots,
-    // timeSlotData,
-    // visitingCapacityData,
-    // getAllPlans,
-    // getDays,
-    // getDaysSlotsSuccessResponse,
-    // getDaySuccess,
-    // request_success_response,
+    driverSuccessData,
+    getDriver
   } = props;
   
+  useEffect(() => {
+    getDriver()
+  }, []);
+  console.log('driverSuccessData',driverSuccessData)
   return (
     <div className="ml-5 mr-5">
       {/* {showMessage}
@@ -258,28 +253,11 @@ function Configrations(props) {
 }
 
 const mapStateToProps = (state) => ({
-  // allPlans: state.configration.allPlans,
-  // visitsPerMonth: state.configration.visitsPerMonth,
-  // timeSlotData: state.configration.timeSlotData,
-  // visitingCapacityData: state.configration.visitingCapacityData,
-  // getDaySuccess: state.configration.getDaySuccess,
-  // request_success_response: state.commonReducer.request_success_response,
-  // getDaysSlotsSuccessResponse: state.configration.getDaysSlotsSuccessResponse,
+  driverSuccessData:state.commonReducer.driverSuccessData
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  // getVisitsPerMonth: () => dispatch(getVisitsPerMonth()),
-  // getTimeSlots: () => dispatch(getTimeSlots()),
-  // archiveVisitPerMonth: (id, data) => dispatch(archiveVisitPerMonth(id, data)),
-  // archivePlanType: (id, data) => dispatch(archivePlanType(id, data)),
-  // archiveVisitTimeSlot: (id, data) => dispatch(archiveVisitTimeSlot(id, data)),
-  // addVisitingCapacity: (data) => dispatch(addVisitingCapacity(data)),
-  // getVisitingCapacity: () => dispatch(getVisitingCapacity()),
-  // addDaysSlots: (data) => dispatch(addDaysSlots(data)),
-  // getAllPlans: () => dispatch(getAllPlans()),
-  // getDays: () => dispatch(getDays()),
-  // addDaysSlotsSuccess: (data) => dispatch(addDaysSlotsSuccess(data)),
-  // requestSuccessResponse: (data) => dispatch(requestSuccessResponse(data)),
+  getDriver:() => dispatch(getDriver())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Configrations);
