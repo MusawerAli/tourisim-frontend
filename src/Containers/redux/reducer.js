@@ -56,7 +56,7 @@ const initialState = {
   driverErrorData:false,
   passangerSuccessData:false,
   passangerErrorData:false,
-  vehicleSuccessData:false,
+  vehicleSuccessData:[],
   vehicleErrorData:false,
 };
 
@@ -84,6 +84,8 @@ export default (state = initialState, action) => {
           ...state, 
           driverErrorData: action.data 
         };
+
+        
 
       case GET_DRIVER_SUCCESS:
         return { 

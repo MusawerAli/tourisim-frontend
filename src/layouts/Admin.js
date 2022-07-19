@@ -93,7 +93,6 @@ class Admin extends React.Component {
   render() {
     
     const routesData =routes[0]
-      debugger;
     return (
       <div className="wrapper">
         <Sidebar

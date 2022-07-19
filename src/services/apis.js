@@ -35,6 +35,7 @@ export async function addDriver(body, token) {
     return await request.post(HTTP_DRIVER, body, authToken(token));
 }
 export async function updateDriver(id, body, token) {
+    debugger
     return await request.put(`${HTTP_DRIVER}/${id}/`, body, authToken(token));
 }
 export async function getDriver(token) {
@@ -43,8 +44,8 @@ export async function getDriver(token) {
 export async function showDriver(id, token) {
     return await request.get(`${HTTP_DRIVER}/${id}/`, authToken(token));
 }
-export async function archiveDriver(id, token) {
-    return await request.delete(`${HTTP_DRIVER}/${id}/`, authToken(token));
+export async function archiveDriver(id, body,token) {
+    return await request.put(`${HTTP_DRIVER}/archive/${id}`,body, authToken(token));
 }
 
 
@@ -82,8 +83,8 @@ export async function getVehicle(token) {
 export async function showVehicle(id, token) {
     return await request.get(`${HTTP_VEHICLE}/${id}/`, authToken(token));
 }
-export async function archiveVehicle(id, token) {
-    return await request.delete(`${HTTP_VEHICLE}/${id}/`, authToken(token));
+export async function archiveVehicle(id,body, token) {
+    return await request.put(`${HTTP_VEHICLE}/archive/${id}/`,body, authToken(token));
 }
 
 

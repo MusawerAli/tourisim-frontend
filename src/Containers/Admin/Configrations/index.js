@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-// import AddPlanTypeModal from "./components/AddPlanTypeModal";
-// import VisitPerMonth from "./components/VisitPerMonthModal";
-// import VisitTimeSlotModal from "./components/VisitTimeSlotModal";
+import AddDriverModal from "./components/AddDriverModal";
+import AddPassangerModal from "./components/AddPassangerModal";
+import AddVehicleModal from "./components/AddVehicleModal";
 
 import {
   Button,
@@ -18,31 +18,36 @@ import {
 
 //actions
 import {
-  // getVisitsPerMonth,
-  // archiveVisitPerMonth,
-  // archivePlanType,
-  // archiveVisitTimeSlot,
-  // addVisitingCapacity,
-  // getVisitingCapacity,
-  // addDaysSlots,
-  // getAllPlans,
-  // getDays,
-  // addDaysSlotsSuccess,
-} from "./redux/actions";
-import { requestSuccessResponse } from "../../redux/actions";
-import { getTimeSlots } from "../Configrations/redux/actions";
+  getDriver,
+  archiveDriver,
+  getVehicle,
+  archiveVehicle
+} from "Containers/redux/actions";
+
 import SweetAlert from "components/Alerts";
 
 function Configrations(props) {
+
+
+const [modal, setModal] = useState(false);
+const [clickType, setClickType] = useState(false);
+const [updateData, setUpdateData] = useState(false);
+const [showMessage, setShowMessage] = useState(false);
+
+
   const {
     driverSuccessData,
-    getDriver
+    vehicleSuccessData,
+    getDriver,
+    
+    getVehicle
   } = props;
   
   useEffect(() => {
     getDriver()
+    getVehicle()
   }, []);
-  console.log('driverSuccessData',driverSuccessData)
+
   return (
     <div className="ml-5 mr-5">
       {/* {showMessage}
@@ -60,7 +65,7 @@ function Configrations(props) {
           </CardTitle>
         </Col>
       </Row>
-      <Row style={{ marginLeft: 0, marginRight: 0 }}>
+      {/* <Row style={{ marginLeft: 0, marginRight: 0 }}>
         <Col md="6" className="removePadding">
           <Button className="adminVisitButton ">Plans & Visits</Button>
         </Col>
@@ -71,24 +76,28 @@ function Configrations(props) {
             </Button>
           </NavLink>
         </Col>
-      </Row>
+      </Row> */}
       <Row>
         <Col md="12">
-          <CardTitle tag="h5" className="textColor">
-            Plans
-          </CardTitle>
+          {/* <CardTitle tag="h5" className="textColor">
+            Drivers
+          </CardTitle> */}
         </Col>
       </Row>
       <Row>
         <Col md="6" className="d-flex align-items-center">
           <CardTitle tag="h5" className="textColor">
-            Plan Types
+            Drivers Detail
           </CardTitle>
         </Col>
         <Col md="6" className="d-flex justify-content-end">
-          <Button
-            className="buttonStyle"
-            
+          <Button 
+          className="buttonStyle"
+          onClick={() => [
+            setModal(true),
+            setUpdateData(false),
+            setClickType("driverModal"),
+          ]}
           >
             Create New
           </Button>
@@ -101,16 +110,55 @@ function Configrations(props) {
               <Table responsive>
                 <thead>
                   <tr>
-                    <th>Plan ID</th>
-                    <th>Plan Name</th>
-                    <th>Creation Date</th>
+                    <th>Name</th>
+                    <th>Sure Name</th>
+                    <th>Email</th>
+                    <th>City</th>
+                    <th>Contact</th>
                     <th>Status</th>
                     <th className="text-center">Action</th>
                   </tr>
                 </thead>
                 <tbody style={{ cursor: "pointer" }}>
-                  asdfasd
-                  
+                {driverSuccessData.length>0 &&
+                    driverSuccessData.map((element) => (
+                      <tr>
+                        <td>{element.user.name}</td>
+                        <td>{element.user.sure_name}</td>
+                        <td>{element.user.email}</td>
+                        <td>{element.user.city}</td>
+                        <td>{element.user.mobile_number}</td>
+                        <td>{element.user.active==true?'Active':'Inactive'}</td>
+                        <td>
+                          <Row className="spaceEvenly">
+                            <u
+                              onClick={() => [
+                                setModal(true),
+                                setUpdateData(element),
+                                setClickType("driverModal"),
+                              ]}
+                            >
+                              Edit
+                            </u>
+                            <u
+                              onClick={() =>
+                                props.archiveDriver(element.user.user_uuid, {
+                                  status:
+                                    element.user.active == true
+                                      ? false
+                                      : true,
+                                })
+                              }
+                            >
+                              
+                              {element.user.active
+                                ? "Archive"
+                                : "Active"}
+                            </u>
+                          </Row>
+                        </td>
+                      </tr>
+                    ))}
                 </tbody>
               </Table>
             </CardBody>
@@ -120,20 +168,26 @@ function Configrations(props) {
 
       <Row>
         <Col md="12">
-          <CardTitle tag="h5" className="textColor">
+          {/* <CardTitle tag="h5" className="textColor">
             Visits
-          </CardTitle>
+          </CardTitle> */}
         </Col>
       </Row>
       <Row>
         <Col md="6" className="d-flex align-items-center">
           <CardTitle tag="h5" className="textColor">
-            Visits Per Month
+            Vehicle Info
           </CardTitle>
         </Col>
         <Col md="6" className="d-flex justify-content-end">
           <Button
-            className="buttonStyle">
+            className="buttonStyle"
+            onClick={() => [
+              setModal(true),
+              setUpdateData(false),
+              setClickType("vehicleModal"),
+            ]}
+            >
             Create New
           </Button>
         </Col>
@@ -145,119 +199,93 @@ function Configrations(props) {
               <Table responsive>
                 <thead>
                   <tr>
-                    <th>Visit ID</th>
-                    <th>Visit Name</th>
-                    <th>Creation Date</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Brand</th>
+                    <th>vehicle No</th>
+                    <th>Color</th>
                     <th>Status</th>
                     <th className="text-center">Action</th>
                   </tr>
                 </thead>
                 <tbody style={{ cursor: "pointer" }}>
+                {vehicleSuccessData.length>0 &&
+                    vehicleSuccessData.map((element) => (
+                      <tr>
+                        <td>{element?.name}</td>
+                        <td>{element?.model}</td>
+                        <td>{element?.brand}</td>
+                        <td>{element?.vehicle_no}</td>
+                        <td>{element?.color}</td>
+                        <td>{element?.active==true?'Active':'Inactive'}</td>
+                        <td>
+                          <Row className="spaceEvenly">
+                            <u
+                              onClick={() => [
+                                setModal(true),
+                                setUpdateData(element),
+                                setClickType("vehicleModal"),
+                              ]}
+                            >
+                              Edit
+                            </u>
+                            <u
+                              onClick={() =>
+                                props.archiveVehicle(element?.vehicle_uuid, {
+                                  status:
+                                    element?.active == true
+                                      ? false
+                                      : true,
+                                })
+                              }
+                            >
+                              
+                              {element?.active
+                                ? "Archive"
+                                : "Active"}
+                            </u>
+                          </Row>
+                        </td>
+                      </tr>
+                    ))}
                 </tbody>
               </Table>
             </CardBody>
           </Card>
         </Col>
       </Row>
-
-      <Row>
-        <Col md="6" className="d-flex align-items-center">
-          <CardTitle tag="h5" className="textColor">
-            Visits Time Slot
-          </CardTitle>
-        </Col>
-        <Col md="6" className="d-flex justify-content-end">
-          <Button
-            className="buttonStyle"
-          >
-            Create New
-          </Button>
-        </Col>
-      </Row>
-      <Row>
-        <Col md="12">
-          <Card>
-            <CardBody>
-              <Table responsive style={{ cursor: "pointer" }}>
-                <thead>
-                  <tr>
-                    <th>Slot ID</th>
-                    <th>Slot Time</th>
-                    <th>Creation Date</th>
-                    <th>Status</th>
-                    <th className="text-center">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                </tbody>
-              </Table>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-
-      <Row>
-        <Col md="12">
-          <CardTitle tag="h5" className="textColor">
-            Time Slot in Days
-          </CardTitle>
-        </Col>
-      </Row>
-
-      <Row className="pt-3">
-        <Col md="10">
-          <CardTitle tag="h5" className="textColor mb-0 font-weight-bold">
-            Visiting Capacity Per Time Slot
-          </CardTitle>
-        </Col>
-      </Row>
-      <Row className="pt-3">
-        <Col md="6">
-          asdfasd
-        </Col>
-      </Row>
-      <Row className="d-flex justify-content-center mt-3">
-        <Button
-          className="btn-round selected"
-          size="lg"
-          style={{ width: 190 }}
-          block
-          
-        >
-          Save
-        </Button>
-      </Row>
-      {/* {clickType === "planType" ? (
-        <AddPlanTypeModal
-          modal={modal}
-          setModal={setModal}
-          updateData={updateData}
-        />
-      ) : clickType === "visitPerMonth" ? (
-        <VisitPerMonth
+      {clickType === "driverModal" ? (
+        <AddDriverModal
           modal={modal}
           setModal={setModal}
           updateData={updateData}
         />
       ) : (
-        clickType === "visitsTimeSlot" && (
-          <VisitTimeSlotModal
+        clickType === "vehicleModal" && (
+          <AddVehicleModal
             modal={modal}
             setModal={setModal}
             updateData={updateData}
           />
         )
-      )} */}
+      )}
     </div>
   );
 }
 
 const mapStateToProps = (state) => ({
-  driverSuccessData:state.commonReducer.driverSuccessData
+  driverSuccessData:state.commonReducer.driverSuccessData,
+  vehicleSuccessData:state.commonReducer.vehicleSuccessData
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  getDriver:() => dispatch(getDriver())
+  getDriver:() => dispatch(getDriver()),
+  getVehicle:()=> dispatch(getVehicle()),
+
+  archiveDriver: (id, data) =>
+  dispatch(archiveDriver(id, data)),
+  archiveVehicle: (id, data) =>
+  dispatch(archiveVehicle(id, data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Configrations);

@@ -21,6 +21,7 @@ import {
   SHOW_PASSANGER_REQUEST,SHOW_PASSANGER_SUCCESS,SHOW_PASSANGER_ERROR,
   SHOW_VEHICLE_REQUEST,SHOW_VEHICLE_SUCCESS,SHOW_VEHICLE_ERROR,
   SHOW_TRANSFER_REQUEST,SHOW_TRANSFER_SUCCESS,SHOW_TRANSFER_ERROR,
+  COMMON_ERROR_MSG,COMMON_SUCCESS_MSG
 } from "./constants";
 
 export const requestErrorResponse = (data) => ({
@@ -31,6 +32,8 @@ export const requestSuccessResponse = (data) => ({
   type: REQUEST_SUCCESS_RESPONSE,
   data,
 });
+
+
 
 
 //PASSANGER
@@ -47,51 +50,60 @@ export const getDriverError = (error) => ({
   error
 });
 
-export const addDriver = () => ({
-  type: ADD_DRIVER_REQUEST
+export const addDriver = (body,setModal,setShowMessage) => ({
+  type: ADD_DRIVER_REQUEST,
+  body,
+  setModal,
+  setShowMessage
 });
-export const addDriverSuccess = (data) => ({
-  type: ADD_DRIVER_SUCCESS,
-  data
-});
-export const addDriverError = (error) => ({
-  type: ADD_DRIVER_ERROR,
-  error
-});
+// export const addDriverSuccess = (data) => ({
+//   type: ADD_DRIVER_SUCCESS,
+//   data
+// });
+// export const addDriverError = (error) => ({
+//   type: ADD_DRIVER_ERROR,
+//   error
+// });
 
-export const showDriver = () => ({
-  type: SHOW_DRIVER_REQUEST
+// export const showDriver = () => ({
+//   type: SHOW_DRIVER_REQUEST
+// });
+// export const showDriverSuccess = (data) => ({
+//   type: SHOW_DRIVER_SUCCESS,
+//   data
+// });
+// export const showDriverError = (error) => ({
+//   type: SHOW_DRIVER_ERROR,
+//   error
+// });
+export const updateDriver = (id,body,setModal,setShowMessage) => ({
+  type: UPDATE_DRIVER_REQUEST,
+  id,
+  body,
+  setModal,
+  setShowMessage
 });
-export const showDriverSuccess = (data) => ({
-  type: SHOW_DRIVER_SUCCESS,
-  data
+// export const updateDriverSuccess = (data) => ({
+//   type: UPDATE_DRIVER_SUCCESS,
+//   data
+// });
+// export const updateDriverError = (error) => ({
+//   type: UPDATE_DRIVER_ERROR,
+//   error
+// });
+export const archiveDriver = (id,body) => ({
+  type: ARCHIVE_DRIVER_REQUEST,
+  id,
+  body
 });
-export const showDriverError = (error) => ({
-  type: SHOW_DRIVER_ERROR,
-  error
-});
-export const updateDriver = () => ({
-  type: UPDATE_DRIVER_REQUEST
-});
-export const updateDriverSuccess = (data) => ({
-  type: UPDATE_DRIVER_SUCCESS,
-  data
-});
-export const updateDriverError = (error) => ({
-  type: UPDATE_DRIVER_ERROR,
-  error
-});
-export const archiveDriver = () => ({
-  type: ARCHIVE_DRIVER_REQUEST
-});
-export const archiveDriverSuccess = (data) => ({
-  type: ARCHIVE_DRIVER_SUCCESS,
-  data
-});
-export const archiveDriverError = (error) => ({
-  type: ARCHIVE_DRIVER_ERROR,
-  error
-});
+// export const archiveDriverSuccess = (data) => ({
+//   type: ARCHIVE_DRIVER_SUCCESS,
+//   data
+// });
+// export const archiveDriverError = (error) => ({
+//   type: ARCHIVE_DRIVER_ERROR,
+//   error
+// });
 
 
 //Passanger
@@ -243,31 +255,38 @@ export const getVehicleError = (error) => ({
   error
 });
 
-export const addVehicle = () => ({
-  type: ADD_VEHICLE_REQUEST
+export const addVehicle = (body,setModal,setShowMessage) => ({
+  type: ADD_VEHICLE_REQUEST,
+  body,
+  setModal,
+  setShowMessage
 });
 export const addVehicleSuccess = (data) => ({
   type: ADD_VEHICLE_SUCCESS,
   data
 });
-export const addVehicleError = (error) => ({
-  type: ADD_VEHICLE_ERROR,
-  error
-});
+// export const addVehicleError = (error) => ({
+//   type: ADD_VEHICLE_ERROR,
+//   error
+// });
 
-export const showVehicle = () => ({
-  type: SHOW_VEHICLE_REQUEST
-});
-export const showVehicleSuccess = (data) => ({
-  type: SHOW_VEHICLE_SUCCESS,
-  data
-});
-export const showVehicleError = (error) => ({
-  type: SHOW_VEHICLE_ERROR,
-  error
-});
-export const updateVehicle = () => ({
-  type: UPDATE_VEHICLE_REQUEST
+// export const showVehicle = () => ({
+//   type: SHOW_VEHICLE_REQUEST
+// });
+// export const showVehicleSuccess = (data) => ({
+//   type: SHOW_VEHICLE_SUCCESS,
+//   data
+// });
+// export const showVehicleError = (error) => ({
+//   type: SHOW_VEHICLE_ERROR,
+//   error
+// });
+export const updateVehicle = (id,body,setModal,setShowMessage) => ({
+  type: UPDATE_VEHICLE_REQUEST,
+  id,
+  body,
+  setModal,
+  setShowMessage
 });
 export const updateVehicleSuccess = (data) => ({
   type: UPDATE_VEHICLE_SUCCESS,
@@ -277,14 +296,16 @@ export const updateVehicleError = (error) => ({
   type: UPDATE_VEHICLE_ERROR,
   error
 });
-export const archiveVehicle = () => ({
-  type: ARCHIVE_VEHICLE_REQUEST
+export const archiveVehicle = (id,body) => ({
+  type: ARCHIVE_VEHICLE_REQUEST,
+  id,
+  body
 });
-export const archiveVehicleSuccess = (data) => ({
-  type: ARCHIVE_VEHICLE_SUCCESS,
-  data
-});
-export const archiveVehicleError = (error) => ({
-  type: ARCHIVE_VEHICLE_ERROR,
-  error
-});
+// export const archiveVehicleSuccess = (data) => ({
+//   type: ARCHIVE_VEHICLE_SUCCESS,
+//   data
+// });
+// export const archiveVehicleError = (error) => ({
+//   type: ARCHIVE_VEHICLE_ERROR,
+//   error
+// });
